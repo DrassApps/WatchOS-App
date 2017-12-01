@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialHB.ttc">
+            <string>ArialHebrew-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FrameworksOp4_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Marcador" textAlignment="center" id="bvT-KN-wLe"/>
+                        <separator alignment="left" id="KIJ-hi-Oxl"/>
+                        <button width="1" alignment="left" title="Basket" id="CAv-IP-9r3">
+                            <connections>
+                                <segue destination="kZK-c5-xcq" kind="push" id="dJm-Hq-82N"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Voley" id="6Ga-Oj-5jH">
+                            <connections>
+                                <segue destination="bfC-zt-0ET" kind="push" id="j3m-js-Qk0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Badminton" id="Ui9-k9-jZz">
+                            <connections>
+                                <segue destination="GxA-U2-3ZO" kind="push" id="UET-sU-kZF"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Basket-->
+        <scene sceneID="yB9-Ic-adh">
+            <objects>
+                <controller id="kZK-c5-xcq" customClass="Basket" customModule="FrameworksOp4_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Basket" textAlignment="center" id="pYQ-zw-qlc"/>
+                        <separator alignment="left" id="C9U-w6-1wb"/>
+                        <group width="1" alignment="left" id="dLz-4j-IbG">
+                            <items>
+                                <label alignment="left" text="00" id="bIX-b1-FpO">
+                                    <color key="textColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="36"/>
+                                </label>
+                                <label alignment="right" text="00" id="7pj-A0-6eQ">
+                                    <color key="textColor" red="1" green="0.5969772845203043" blue="0.13355790511605703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="36"/>
+                                </label>
+                                <button width="39" alignment="center" title="1" id="i13-Qb-Kwz">
+                                    <color key="titleColor" red="1" green="0.15110837899999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <connections>
+                                        <action selector="add_cuarto1" destination="kZK-c5-xcq" id="mlh-97-hyb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Local + 1 " id="dqn-BM-lv7">
+                            <color key="backgroundColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="add_local1" destination="kZK-c5-xcq" id="EHb-bN-ShZ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Visitante +1" id="JwO-eK-zEj">
+                            <color key="backgroundColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="add_visitante1" destination="kZK-c5-xcq" id="BDd-6o-Hpu"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonCuarto" destination="i13-Qb-Kwz" id="7OT-bu-xZa"/>
+                        <outlet property="buttonLocal" destination="dqn-BM-lv7" id="Stb-rz-X8G"/>
+                        <outlet property="buttonVisitante" destination="JwO-eK-zEj" id="bR6-ew-rhL"/>
+                        <outlet property="labbelLocal" destination="bIX-b1-FpO" id="a2E-Ze-n9F"/>
+                        <outlet property="labelVisitante" destination="7pj-A0-6eQ" id="kMa-bk-yJg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="30"/>
+        </scene>
+        <!--Voley-->
+        <scene sceneID="M65-PS-7dV">
+            <objects>
+                <controller id="bfC-zt-0ET" customClass="Voley" customModule="FrameworksOp4_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Voley" textAlignment="center" id="aut-iU-wsX"/>
+                        <separator alignment="left" id="hUs-PZ-p7s"/>
+                        <group width="1" height="30" alignment="left" id="6qN-Rs-G9j">
+                            <items>
+                                <label width="61" alignment="left" verticalAlignment="center" text="Set" textAlignment="center" baselineAdjustment="alignCenters" id="OmW-MX-KPC"/>
+                                <label alignment="right" text="00" id="lks-2F-feV">
+                                    <color key="textColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text="00" id="ehb-zn-0j6">
+                                    <color key="textColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="IxN-Pd-WXa">
+                            <items>
+                                <label alignment="right" text="00" id="stG-hK-ot4">
+                                    <color key="textColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                                <label width="61" alignment="left" verticalAlignment="center" text="Puntos" textAlignment="center" baselineAdjustment="alignCenters" id="9dr-X8-8nO"/>
+                                <label alignment="left" text="00" id="Z6d-lC-VEJ">
+                                    <color key="textColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Local + 1 " id="SDl-S9-PwR">
+                            <color key="backgroundColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="add_local1" destination="bfC-zt-0ET" id="DbI-3B-Dgy"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Visitante +1" id="zfo-zt-Fy3">
+                            <color key="backgroundColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="add_visitante1" destination="bfC-zt-0ET" id="KJs-ig-Ejf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonLocal" destination="SDl-S9-PwR" id="9L4-zq-fTv"/>
+                        <outlet property="buttonVisitante" destination="zfo-zt-Fy3" id="Ubx-FB-ruN"/>
+                        <outlet property="labbelPuntoLocal" destination="Z6d-lC-VEJ" id="kUV-xb-9zJ"/>
+                        <outlet property="labbelSetLocal" destination="ehb-zn-0j6" id="mFO-QR-0gp"/>
+                        <outlet property="labelPuntoVisitante" destination="stG-hK-ot4" id="7Mu-Qp-AxK"/>
+                        <outlet property="labelSetVisitante" destination="lks-2F-feV" id="yeq-zY-AAV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="361"/>
+        </scene>
+        <!--Badminton-->
+        <scene sceneID="3Ag-lX-mod">
+            <objects>
+                <controller id="GxA-U2-3ZO" customClass="Badminton" customModule="FrameworksOp4_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Bádminton" textAlignment="center" id="f4e-Sh-cui"/>
+                        <separator alignment="left" id="y09-aG-DLq"/>
+                        <group width="1" height="30" alignment="left" id="Vrz-bQ-l5M">
+                            <items>
+                                <label width="61" alignment="left" verticalAlignment="center" text="Set" textAlignment="center" baselineAdjustment="alignCenters" id="okl-zn-F3m"/>
+                                <label alignment="right" text="00" id="D59-Of-ND3">
+                                    <color key="textColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text="00" id="MUT-AM-jCz">
+                                    <color key="textColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="jPb-ci-TLV">
+                            <items>
+                                <label alignment="right" text="00" id="7qe-Qn-dgj">
+                                    <color key="textColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                                <label width="61" alignment="left" verticalAlignment="center" text="Puntos" textAlignment="center" baselineAdjustment="alignCenters" id="evo-1Y-sJ6"/>
+                                <label alignment="left" text="00" id="z91-tX-rh4">
+                                    <color key="textColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Local + 1 " id="bRa-Ey-RJE">
+                            <color key="backgroundColor" red="0.28235294119999998" green="0.70980392160000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="add_local1" destination="GxA-U2-3ZO" id="SVN-VI-KGL"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Visitante +1" id="IQr-HY-5NA">
+                            <color key="backgroundColor" red="1" green="0.59697728449999998" blue="0.13355790510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="add_visitante1" destination="GxA-U2-3ZO" id="u4C-Xw-Iqq"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonLocal" destination="bRa-Ey-RJE" id="Guq-wc-DuB"/>
+                        <outlet property="buttonVisitante" destination="IQr-HY-5NA" id="Gpd-oU-5gX"/>
+                        <outlet property="labbelPuntoLocal" destination="z91-tX-rh4" id="p2L-kz-oB5"/>
+                        <outlet property="labbelSetLocal" destination="MUT-AM-jCz" id="sVl-8z-rU5"/>
+                        <outlet property="labelPuntoVisitante" destination="7qe-Qn-dgj" id="4CA-Qb-8d8"/>
+                        <outlet property="labelSetVisitante" destination="D59-Of-ND3" id="hAo-ye-as2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="687"/>
+        </scene>
+    </scenes>
+</document>
